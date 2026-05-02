@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 00:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1061,10 +1061,10 @@ Package hyperref Info: Link coloring OFF on input line 122.
 <figures/uet.jpg, id=83, 1125.20375pt x 1125.20375pt>
 File: figures/uet.jpg Graphic file (type jpg)
 <use figures/uet.jpg>
-Package pdftex.def Info: figures/uet.jpg  used on input line 17.
+Package pdftex.def Info: figures/uet.jpg  used on input line 18.
 (pdftex.def)             Requested size: 91.04742pt x 91.03111pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
@@ -1213,18 +1213,18 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 03B38D52AF3E1F86FCE6B3A28C15260E;2478.
+(rerunfilecheck)             Checksum: 49809C01E7B4A583A39A94B93BD05F8B;3113.
  ) 
 Here is how much of TeX's memory you used:
  28537 strings out of 467691
  516061 string characters out of 5425055
- 951919 words of memory out of 5000000
+ 951993 words of memory out of 5000000
  57008 multiletter control sequences out of 15000+600000
  645074 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,9n,107p,581b,455s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ADMIN/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ADMIN/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on thesis.pdf (12 pages, 129929 bytes).
+Output written on thesis.pdf (12 pages, 133178 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 500000)
