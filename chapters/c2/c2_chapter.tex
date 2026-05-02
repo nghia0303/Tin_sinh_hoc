@@ -2,7 +2,6 @@
 
 \section{Biological background of antimicrobial resistance}
 
-Antimicrobial resistance emerges when bacteria acquire genetic changes that reduce or eliminate the effect of antibiotic treatment. These changes may come from acquired resistance genes, point mutations in native genes, gene amplification, or broader genomic context affecting gene regulation. In \textit{Salmonella enterica}, resistance can involve beta-lactamases, aminoglycoside-modifying enzymes, quinolone-related point mutations, tetracycline resistance genes, and many other mechanisms.
 Antimicrobial resistance appears when bacteria gain genetic changes that weaken or block the effect of an antibiotic. In practice, these changes are often known resistance genes or specific mutations. In \textit{Salmonella enterica}, resistance can come from several well-known mechanisms, for example enzymes that break down beta-lactam drugs such as penicillins and cephalosporins, genes that protect against tetracycline, or mutations linked to quinolone resistance.
 
 For this reason, AMR prediction from genomic data is not only a classification task. It is also an interpretation task. A useful AMR predictor should not only output a label, but should also keep a clear link between that label and known resistance genes or mutations.
@@ -18,7 +17,7 @@ In this project, the final supervised learning label is binary:
     \item \textbf{Susceptible} is encoded as the negative class.
 \end{itemize}
 
-Intermediate, nonstandard, and ambiguous labels are excluded to avoid adding noise near the decision boundary. This choice fits the current report because the goal is a robust binary prediction task rather than detailed MIC prediction.
+Intermediate, nonstandard, and ambiguous labels are excluded to avoid adding noise near the decision boundary. This choice fits the present study because the goal is a robust binary prediction task rather than detailed MIC prediction.
 
 \section{Genotype definition: curated AMR determinants}
 
@@ -33,7 +32,7 @@ The genotype side of the project is built from curated AMR determinant resources
     \item \texttt{Scope}: how conservative the evidence is.
 \end{itemize}
 
-This representation fits the report well because every feature still has a biological meaning and can be traced back to a known resistance mechanism.
+This representation is appropriate because every feature still has a biological meaning and can be traced back to a known resistance mechanism.
 
 \section{Data sources used in the project}
 
@@ -49,7 +48,7 @@ The common key connecting these resources is the \texttt{BioSample} identifier. 
 
 \section{Data filtering and cohort selection}
 
-Not every downloaded record is suitable for training. The report therefore relies on a filtered and aligned cohort with the following principles:
+Not every downloaded record is suitable for training. The study therefore relies on a filtered and aligned cohort with the following principles:
 
 \begin{itemize}
     \item keep only isolates that appear in both genotype and phenotype resources;

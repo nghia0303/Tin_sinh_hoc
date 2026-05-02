@@ -1,6 +1,6 @@
 \section{Problem Definition}
 
-Antimicrobial resistance (AMR) prediction from genomic data is a problem of predicting a laboratory outcome from DNA-based evidence. In this report, the target organism is \textit{Salmonella enterica}, an important foodborne bacterial pathogen that is often monitored in AMR surveillance programs. The practical objective is simple: given the genomic content of one isolate, can we predict whether it will be resistant or susceptible to a specific antibiotic in laboratory testing?
+Antimicrobial resistance (AMR) prediction from genomic data is a problem of predicting a laboratory outcome from DNA-based evidence. In this study, the target organism is \textit{Salmonella enterica}, an important foodborne bacterial pathogen that is often monitored in AMR surveillance programs. The practical objective is simple: given the genomic content of one isolate, can we predict whether it will be resistant or susceptible to a specific antibiotic in laboratory testing?
 
 The input side of the problem is the genotype representation of each isolate. Instead of using the raw genome sequence directly, this study uses a curated list of detected AMR genes and resistance-related mutations from AMRFinderPlus and the NCBI MicroBIGG-E resource. Each record also includes useful labels such as drug class, drug subclass, detection method, and evidence scope. This makes the features easier to understand than genome-wide features such as generic k-mers, which are only short sequence fragments without direct biological meaning on their own.
 
@@ -14,7 +14,7 @@ Can curated AMR determinants from a \textit{Salmonella enterica} genome reliably
 
 This question matters from both the biological and computational sides. Biologically, known resistance genes and mutations are important, but gene presence alone does not always explain the final laboratory result. Computationally, the project must decide how strictly it should follow known antibiotic groupings before machine learning is applied.
 
-The work in this report studies that design space through three feature-connection settings:
+This study examines that design space through three feature-connection settings:
 
 \begin{itemize}
     \item \textbf{Strict}: only determinants directly aligned with the narrow lineage of the target antibiotic are used.
@@ -22,4 +22,4 @@ The work in this report studies that design space through three feature-connecti
     \item \textbf{All}: all curated AMR determinants observed in the isolate are included, regardless of narrow lineage.
 \end{itemize}
 
-These settings allow the report to study not only prediction quality, but also the trade-off between simple biological interpretation and broader feature coverage.
+These settings allow the study to examine not only prediction quality, but also the trade-off between simple biological interpretation and broader feature coverage.

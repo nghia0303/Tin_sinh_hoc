@@ -4,7 +4,7 @@ The main predictive model in this project is an antibiotic-specific XGBoost clas
 
 The project uses a supervised binary classification setting with resistant isolates treated as the positive class. This choice matches the practical objective of detecting resistant cases. The feature matrix contains determinant-level evidence from the normalized genotype table, while the target labels come from cleaned AST phenotype data.
 
-Cross-validation is used to estimate model performance consistently across antibiotics. The current implementation uses five-fold stratified cross-validation with a fixed random seed. This keeps the class ratio similar across folds and makes the evaluation more stable than a single train-test split. The main XGBoost settings are: \texttt{n\_estimators = 250}, \texttt{learning\_rate = 0.05}, \texttt{max\_depth = 5}, \texttt{subsample = 0.8}, and \texttt{colsample\_bytree = 0.8}. The implementation also uses class weighting through \texttt{scale\_pos\_weight} so that resistant cases are not dominated by the larger susceptible class when the data are imbalanced.
+Cross-validation is used to estimate model performance consistently across antibiotics. The models are evaluated with five-fold stratified cross-validation and a fixed random seed. This keeps the class ratio similar across folds and makes the evaluation more stable than a single train-test split. The XGBoost models use 250 trees, learning rate 0.05, maximum depth 5, subsample 0.8, and column subsample 0.8. Class weighting through \texttt{scale\_pos\_weight} is also used so that resistant cases are not dominated by the larger susceptible class when the data are imbalanced.
 
 The evaluation focuses on the following metrics:
 
@@ -24,4 +24,4 @@ This setup is important because it separates two sources of improvement:
     \item improvement gained by replacing a direct rule with machine learning.
 \end{itemize}
 
-As a result, the report can compare a simple biology-based rule against a learned model under the same dataset construction protocol.
+As a result, the study can compare a simple biology-based rule against a learned model under the same dataset construction protocol.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 01:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.3)  3 MAY 2026 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,11 +1328,11 @@ Chapter 2.
 
 ]
 LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 2
-8.
+7.
  (C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [7]
-[8]) [9] (chapters/c3/c3_chapter.tex
+) [7])
+[8] [9] (chapters/c3/c3_chapter.tex
 Chapter 3.
 (chapters/c3/c3_modeling.tex [10
 
@@ -1378,7 +1378,7 @@ nclusion.tex) [21
 
 
 ] (thesis.bbl
-Underfull \hbox (badness 1776) in paragraph at lines 57--64
+Underfull \hbox (badness 1776) in paragraph at lines 58--65
 []\T5/cmr/m/n/13 Yunxiao Ren, Tri-nad Chakraborty, Swap-nil Doi-jad, Linda Fal-
 gen-hauer,
  []
@@ -1407,13 +1407,13 @@ Here is how much of TeX's memory you used:
  57153 multiletter control sequences out of 15000+600000
  650335 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,9n,107p,797b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,9n,107p,776b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/ADMIN/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb
 ><C:/Users/ADMIN/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Use
 rs/ADMIN/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ADMI
 N/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on thesis.pdf (30 pages, 339657 bytes).
+Output written on thesis.pdf (30 pages, 337941 bytes).
 PDF statistics:
  412 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)

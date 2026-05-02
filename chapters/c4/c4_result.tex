@@ -2,7 +2,7 @@
 
 \subsection{Experimental setup}
 
-The experiments are conducted on antibiotic-specific datasets prepared from the same shared genotype-phenotype cohort. The same cohort selection rules, phenotype cleaning rules, and genotype normalization rules are applied across all scopes to keep the comparison fair. The current implementation evaluates 14 antibiotics that satisfy the minimum sample and class-count thresholds required for stable supervised learning.
+The experiments are conducted on antibiotic-specific datasets prepared from the same shared genotype-phenotype cohort. The same cohort selection rules, phenotype cleaning rules, and genotype normalization rules are applied across all scopes to keep the comparison fair. The final experiment set contains 14 antibiotics that satisfy the minimum sample and class-count thresholds required for stable supervised learning.
 
 The main model-based comparison includes three determinant-connection scopes:
 
@@ -75,7 +75,7 @@ The rule-based baselines are useful because they show when the presence of known
 
 However, the same direct rule becomes too weak or too coarse for other antibiotics. Under the strict rule baseline, ceftriaxone reaches recall only 0.101 and precision 0.090, while ceftiofur reaches recall 0.133 and precision 0.102. When the scope is relaxed to broad rule-based inference, recall for ceftriaxone increases sharply to 0.985, but precision remains only 0.489. This shows the main trade-off clearly: broader matching can recover missed resistant isolates, but it can also overcall resistance by accepting determinants that are related to the same drug class but are not specific enough to the target drug.
 
-Machine learning changes this balance substantially. For ceftriaxone, \textit{broad ML} achieves precision 0.992 and recall 0.976, while \textit{all ML} achieves precision 0.990 and recall 0.974. In other words, the learned models keep the broad coverage needed to recover resistant isolates, but avoid much of the precision loss seen in broad rule-based inference. A similar pattern appears for ceftiofur and cefoxitin. These comparisons support the main scientific argument of the report: machine learning is most valuable when broader determinant evidence must be combined more carefully than a direct rule can do.
+Machine learning changes this balance substantially. For ceftriaxone, \textit{broad ML} achieves precision 0.992 and recall 0.976, while \textit{all ML} achieves precision 0.990 and recall 0.974. In other words, the learned models keep the broad coverage needed to recover resistant isolates, but avoid much of the precision loss seen in broad rule-based inference. A similar pattern appears for ceftiofur and cefoxitin. These comparisons support the main scientific argument of the study: machine learning is most valuable when broader determinant evidence must be combined more carefully than a direct rule can do.
 
 \subsection{Interpretation of zero-hit and zero-feature rows}
 
@@ -85,4 +85,4 @@ This result explains much of the performance gap between strict and broader sett
 
 \subsection{Discussion of limitations}
 
-The current study predicts a binary resistant/susceptible phenotype rather than MIC, uses curated determinant resources rather than full pan-genome features, and has not yet performed external validation on an independent surveillance cohort. These limitations do not invalidate the study, but they define its scope clearly and position it as a determinant-based bioinformatics analysis rather than a full clinical deployment study.
+This study predicts a binary resistant/susceptible phenotype rather than MIC, uses curated determinant resources rather than full pan-genome features, and has not yet performed external validation on an independent surveillance cohort. These limitations do not invalidate the study, but they define its scope clearly and position it as a determinant-based bioinformatics analysis rather than a full clinical deployment study.
