@@ -1,3 +1,75 @@
 \chapter{Biological Background and Data Description}
 
-Replace this chapter with your chapter 2 content.
+\section{Biological background of antimicrobial resistance}
+
+Antimicrobial resistance emerges when bacteria acquire genetic changes that reduce or eliminate the effect of antibiotic treatment. These changes may come from acquired resistance genes, point mutations in native genes, gene amplification, or broader genomic context affecting gene regulation. In \textit{Salmonella enterica}, resistance can involve beta-lactamases, aminoglycoside-modifying enzymes, quinolone-related point mutations, tetracycline resistance genes, and many other mechanisms.
+Antimicrobial resistance appears when bacteria gain genetic changes that weaken or block the effect of an antibiotic. In practice, these changes are often known resistance genes or specific mutations. In \textit{Salmonella enterica}, resistance can come from several well-known mechanisms, for example enzymes that break down beta-lactam drugs such as penicillins and cephalosporins, genes that protect against tetracycline, or mutations linked to quinolone resistance.
+
+For this reason, AMR prediction from genomic data is not only a classification task. It is also an interpretation task. A useful AMR predictor should not only output a label, but should also keep a clear link between that label and known resistance genes or mutations.
+
+\section{Phenotype definition: AST and resistance labels}
+
+The phenotype side of the project comes from antimicrobial susceptibility testing. AST checks whether an isolate behaves as resistant or susceptible to a specific drug in laboratory conditions. The raw measurement is often the minimum inhibitory concentration (MIC), which is the drug level needed to stop visible bacterial growth. This value is then converted into a label such as susceptible, intermediate, or resistant according to a breakpoint standard.
+
+In this project, the final supervised learning label is binary:
+
+\begin{itemize}
+    \item \textbf{Resistant} is encoded as the positive class.
+    \item \textbf{Susceptible} is encoded as the negative class.
+\end{itemize}
+
+Intermediate, nonstandard, and ambiguous labels are excluded to avoid adding noise near the decision boundary. This choice fits the current report because the goal is a robust binary prediction task rather than detailed MIC prediction.
+
+\section{Genotype definition: curated AMR determinants}
+
+The genotype side of the project is built from curated AMR determinant resources rather than raw sequence fragments. Each isolate is represented by detected resistance genes and mutations reported by AMRFinderPlus and organized in the MicroBIGG-E resource. This is useful because AMRFinderPlus provides a curated catalog and structured annotations for resistance determinants~\citep{feldgarden2021amrfinderplus}. Each determinant record contains several important fields:
+
+\begin{itemize}
+    \item \texttt{Element symbol}: the name of the gene or mutation.
+    \item \texttt{Class}: a broad drug class.
+    \item \texttt{Subclass}: a more specific drug group.
+    \item \texttt{Subtype}: whether the determinant is a gene or a mutation.
+    \item \texttt{Method}: how the determinant was detected.
+    \item \texttt{Scope}: how conservative the evidence is.
+\end{itemize}
+
+This representation fits the report well because every feature still has a biological meaning and can be traced back to a known resistance mechanism.
+
+\section{Data sources used in the project}
+
+The project uses three major data sources:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Assembled genomes in FASTA format}, used for AMRFinderPlus-based prototype validation.
+    \item \textbf{NCBI MicroBIGG-E genotype data}, used as the main large-scale determinant table for feature construction.
+    \item \textbf{NCBI AST phenotype data}, used as the ground-truth source of antibiotic resistance labels.
+\end{enumerate}
+
+The common key connecting these resources is the \texttt{BioSample} identifier. It allows genotype and phenotype rows to be matched isolate by isolate and makes antibiotic-specific datasets possible.
+
+\section{Data filtering and cohort selection}
+
+Not every downloaded record is suitable for training. The report therefore relies on a filtered and aligned cohort with the following principles:
+
+\begin{itemize}
+    \item keep only isolates that appear in both genotype and phenotype resources;
+    \item keep only antibiotics with enough observations for stable model training;
+    \item keep only phenotype rows with usable binary resistance labels;
+    \item keep only AMR-related genotype rows with biologically meaningful evidence.
+\end{itemize}
+
+For the final modeling cohort, antibiotics must satisfy minimum sample thresholds so that each target has enough resistant and susceptible examples. This is necessary because resistance rates differ strongly between drugs, and some drugs simply do not have enough data for stable model evaluation.
+
+\section{Why this dataset is biologically non-trivial}
+
+Even with curated determinant features and cleaned phenotype labels, genotype does not map perfectly to phenotype. An isolate may carry a resistance gene but still test susceptible, or it may test resistant even when no obvious determinant is detected in the curated feature set. Several biological reasons can explain this mismatch:
+
+\begin{itemize}
+    \item a gene may be present but not strongly expressed;
+    \item different variants of the same gene may behave differently;
+    \item multiple genes may interact with each other;
+    \item the curated catalog may still miss some resistance signals;
+    \item laboratory measurement and breakpoint rules may also affect the final label.
+\end{itemize}
+
+This genotype-phenotype gap is one of the main reasons why both rule-based inference and machine learning must be tested carefully instead of being assumed to work perfectly.

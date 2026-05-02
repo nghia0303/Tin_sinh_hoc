@@ -1,3 +1,74 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Feldgarden et~al.(2021)Feldgarden, Brover, Gonzalez-Escalona, Frye,
+  Haendiges, Haft, Hoffmann, Pettengill, Prasad, Tillman, Tyson, and
+  Klimke]{feldgarden2021amrfinderplus}
+Michael Feldgarden, Vyacheslav Brover, Narjol Gonzalez-Escalona, Jonathan~G.
+  Frye, Julie Haendiges, Daniel~H. Haft, Maria Hoffmann, James~B. Pettengill,
+  Arjun~B. Prasad, Glenn~E. Tillman, Gregory~H. Tyson, and William Klimke.
+\newblock Amrfinderplus and the reference gene catalog facilitate examination
+  of the genomic links among antimicrobial resistance, stress response, and
+  virulence.
+\newblock \emph{Scientific Reports}, 11:\penalty0 12728, 2021.
+\newblock \doi{10.1038/s41598-021-91456-0}.
+
+\bibitem[Shen et~al.(2024)Shen, Zhang, Gull, and Zhang]{shen2024comparison}
+Zhenyu Shen, C.~Y. Zhang, Tamara Gull, and Shuping Zhang.
+\newblock Comparison of genotypic and phenotypic antimicrobial resistance
+  profiles of salmonella enterica isolates from poultry diagnostic specimens.
+\newblock \emph{Avian Diseases}, 36\penalty0 (4), 2024.
+\newblock \doi{10.1177/10406387241242118}.
+
+\bibitem[Maguire et~al.(2019)Maguire, Rehman, Carrillo, Diarra, and
+  Beiko]{maguire2019identification}
+Fintan Maguire, Muhammad~A. Rehman, Catalina Carrillo, Moussa~S. Diarra, and
+  Robert~G. Beiko.
+\newblock Identification of primary antimicrobial resistance drivers in
+  agricultural nontyphoidal salmonella enterica serovars by using machine
+  learning.
+\newblock \emph{mSystems}, 4\penalty0 (4):\penalty0 e00211--19, 2019.
+\newblock \doi{10.1128/mSystems.00211-19}.
+
+\bibitem[Benefo et~al.(2024)Benefo, Ramachandran, and
+  Pradhan]{benefo2024genomebased}
+Edmund~O. Benefo, Padmini Ramachandran, and Abani~K. Pradhan.
+\newblock Genome-based machine learning for predicting antimicrobial resistance
+  in salmonella isolated from chicken.
+\newblock \emph{LWT}, 199:\penalty0 116122, 2024.
+\newblock \doi{10.1016/j.lwt.2024.116122}.
+
+\bibitem[He et~al.(2025)He, Zhou, Zhang, Cui, He, Gehring, Deng, and
+  Shi]{he2025prediction}
+Yichen He, Xiujuan Zhou, Lida Zhang, Yan Cui, Yiping He, Andrew Gehring,
+  Xiangyu Deng, and Xianming Shi.
+\newblock Prediction of antibiotic resistance phenotypes and minimum inhibitory
+  concentrations in salmonella using machine learning analysis of its
+  pan-genome and pan-resistome features.
+\newblock \emph{Foodborne Pathogens and Disease}, 2025.
+\newblock \doi{10.1089/fpd.2024.0170}.
+
+\bibitem[Ren et~al.(2022)Ren, Chakraborty, Doijad, Falgenhauer, Falgenhauer,
+  Goesmann, Hauschild, Schwengers, and Heider]{ren2022prediction}
+Yunxiao Ren, Trinad Chakraborty, Swapnil Doijad, Linda Falgenhauer, Jane
+  Falgenhauer, Alexander Goesmann, Anne-Christin Hauschild, Oliver Schwengers,
+  and Dominik Heider.
+\newblock Prediction of antimicrobial resistance based on whole-genome
+  sequencing and machine learning.
+\newblock \emph{Bioinformatics}, 38\penalty0 (2):\penalty0 325--334, 2022.
+\newblock \doi{10.1093/bioinformatics/btab681}.
+
+\bibitem[Wang et~al.(2023)Wang, Hung, Chou, Hsuan, Chen, Chang, Jan, and
+  Tung]{wang2023using}
+Chia-Chi Wang, Yu-Ting Hung, Che-Yu Chou, Shih-Ling Hsuan, Zeng-Weng Chen,
+  Pei-Yu Chang, Tong-Rong Jan, and Chun-Wei Tung.
+\newblock Using random forest to predict antimicrobial minimum inhibitory
+  concentrations of nontyphoidal salmonella in taiwan.
+\newblock \emph{Veterinary Research}, 54:\penalty0 11, 2023.
+\newblock \doi{10.1186/s13567-023-01141-5}.
 
 \end{thebibliography}

@@ -1,3 +1,14 @@
 \subsection{Workflow Execution}
 
-Replace this section with your workflow execution details.
+In execution, the pipeline produces one prepared dataset per antibiotic per biological scope. Each prepared table contains one row per isolate and a set of feature columns derived from detected genes and mutations. The current implementation uses coverage, identity, and lineage-related evidence from the curated determinant table as model inputs.
+
+Workflow execution can be understood at two complementary levels:
+
+\begin{itemize}
+    \item \textbf{Data preparation level}: how the phenotype and genotype tables are transformed into prepared model-input tables.
+    \item \textbf{Modeling level}: how prepared tables are passed into antibiotic-specific training and evaluation.
+\end{itemize}
+
+The codebase also separates data ingestion, staged storage, prepared-table construction, and prediction logic. Although the main focus of this report is scientific evaluation rather than software architecture, this staged design supports reproducibility and keeps biological preprocessing separate from prediction-serving interfaces.
+
+By the end of this workflow, the cohort, feature scopes, evaluation protocol, and comparable outputs are all defined explicitly, which makes the later experimental comparison straightforward.

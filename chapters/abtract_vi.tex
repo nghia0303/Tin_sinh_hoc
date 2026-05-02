@@ -1,4 +1,10 @@
-\chapter*{Abstract (Vietnamese)}
-\addcontentsline{toc}{chapter}{Abstract (Vietnamese)}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
-Replace this section with the Vietnamese abstract.
+This report presents a determinant-based workflow for predicting antimicrobial resistance in \textit{Salmonella enterica} from bacterial genomic data. The main objective is to determine whether curated resistance determinants, including acquired resistance genes and resistance-associated mutations, can be used to predict binary resistant/susceptible phenotypes for individual antibiotics. Instead of relying on genome-wide feature spaces that are harder to interpret biologically, the study focuses on a curated determinant space derived from AMRFinderPlus and MicroBIGG-E.
+
+The workflow has three main parts: cleaning phenotype labels from AST data, cleaning and normalizing genotype records, and building one model-ready table for each antibiotic. To study how much biological knowledge should be used before learning starts, the report compares three connection scopes: \textit{strict}, \textit{broad}, and \textit{all}. XGBoost models are then trained for each antibiotic with five-fold cross-validation. In addition, two simple rule-based baselines, \textit{strict rule-based} and \textit{broad rule-based}, are used as direct references without machine learning.
+
+The results show that \textit{all ML} gives the best overall predictive performance, while \textit{broad ML} gives the best balance between feature coverage and biological interpretability. The rule-based baselines also show that, for some antibiotics, known genes and mutations are already enough for very accurate prediction. For other antibiotics, however, this direct gene-to-label rule is too simple and produces many false positives or false negatives. In those cases, machine learning helps by combining several signals at the same time.
+
+Overall, the study shows that AMR prediction from curated genes and mutations is a suitable bioinformatics approach for this problem. It also shows that the difference between \textit{strict}, \textit{broad}, and \textit{all} is important: these settings represent different trade-offs between biological simplicity, ease of interpretation, and predictive accuracy.

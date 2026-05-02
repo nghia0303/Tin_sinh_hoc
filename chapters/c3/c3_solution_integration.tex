@@ -1,3 +1,17 @@
 \subsection{Solution Integration}
 
-Replace this section with your integration details.
+The proposed solution combines biological data sources, curated AMR annotations, and predictive modeling into one workflow. Instead of training directly on raw sequence, the pipeline first builds an interpretable feature space based on detected resistance genes and mutations, and then connects that feature space to antibiotic-specific phenotype labels.
+
+At a high level, the integrated pipeline can be summarized as follows:
+
+\begin{enumerate}[label=\arabic*.]
+    \item obtain determinant data from AMRFinderPlus and MicroBIGG-E;
+    \item obtain phenotype labels from AST records;
+    \item align both resources by \texttt{BioSample};
+    \item clean and normalize genotype and phenotype tables;
+    \item construct antibiotic-specific feature tables under different biological scopes;
+    \item train and evaluate prediction models;
+    \item compare model-based inference with curated determinant-based rule inference.
+\end{enumerate}
+
+This integration is important because every stage remains traceable. The final prediction is not separated from its biological origin. The report can still explain where each feature comes from, how each label is defined, and why a particular set of genes or mutations is considered relevant to a target antibiotic.

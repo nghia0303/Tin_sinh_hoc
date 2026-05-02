@@ -1,3 +1,11 @@
 \subsection{Workflow Evolution}
 
-Replace this section with your workflow evolution details.
+The workflow did not begin in its final form. It evolved from a simple determinant extraction idea into a structured comparison framework. This evolution matters because it explains why the final report compares multiple biological scopes instead of presenting only one model.
+
+The earliest idea was that only determinants directly tied to a target antibiotic should be used. This led naturally to the \textit{strict} setting. However, exploratory analysis showed that this setting often leaves many isolates with no usable determinant evidence, even when those isolates belong to the valid phenotype cohort. In practical terms, the resulting feature tables contain many all-zero rows, which makes the narrow design too fragile for several antibiotics.
+
+To address this issue, a broader within-class setting was introduced. The \textit{broad} scope allows genotype evidence from the larger drug class rather than only the narrow lineage branch. This improves coverage while still keeping the feature space guided by biological knowledge.
+
+Finally, the \textit{all} setting was added as the widest determinant-based representation. This setting does not restrict the features to one drug lineage and therefore tests whether the model benefits from the full curated set of detected resistance determinants in each isolate. The purpose of \textit{all} is not to maximize interpretability, but to measure how much predictive benefit appears when biological constraints are relaxed.
+
+This evolution from \textit{strict} to \textit{broad} to \textit{all} forms the core experimental design of the project. It should be understood as a deliberate trade-off between simplicity, coverage, and predictive power rather than as a purely technical parameter sweep.

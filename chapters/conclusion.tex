@@ -1,4 +1,12 @@
 \chapter*{Conclusion and Future Work}
 \addcontentsline{toc}{chapter}{Conclusion and Future Work}
 
-Replace this chapter with your conclusion.
+This report studies antimicrobial resistance prediction for \textit{Salmonella enterica} using curated AMR determinants derived from genomic data. The work combines biological filtering, determinant normalization, genotype-phenotype cohort alignment, and antibiotic-specific predictive modeling into a reproducible pipeline. Rather than treating the task as a generic machine learning problem, the report studies how biological scope affects prediction quality.
+
+The main methodological contribution is the comparison of three determinant-connection scopes: \textit{strict}, \textit{broad}, and \textit{all}. The current results indicate that the \textit{all} scope provides the strongest global predictive performance, while the \textit{broad} scope offers the most practical compromise between biological interpretability and model effectiveness. The \textit{strict} scope remains useful as a narrow biological reference, but it is too restrictive to serve as a universal default across antibiotics.
+
+Another important conclusion is that feature-engineering decisions are not merely technical. Choices such as phenotype cleaning, determinant filtering, class/subclass normalization, and antibiotic-scope matching directly shape the biological meaning of the resulting model inputs. For that reason, the pipeline is best understood as a bioinformatics workflow rather than only as a classifier benchmark.
+
+The addition of curated determinant-based rule baselines under the \textit{strict} and \textit{broad} settings further clarifies the main result. Direct genotype-to-phenotype inference is already highly effective for some antibiotics, but it becomes too coarse when broader class-level matching is required. In those settings, machine learning keeps broad biological coverage while sharply improving precision. This comparison shows that the main value of learned models lies not in replacing biological knowledge, but in combining broader determinant evidence more effectively than a direct rule can.
+
+Future work may include MIC prediction, external validation on an independent cohort, more detailed interpretation of top-ranked determinants, and broader resistome or pan-genome feature integration.

@@ -1,3 +1,27 @@
 \section{Model Training and Prediction}
 
-Replace this section with your modeling content.
+The main predictive model in this project is an antibiotic-specific XGBoost classifier trained on prepared feature tables built from detected genes and mutations. One model is trained for each antibiotic because the relationship between genotype and phenotype can differ greatly from one drug family to another.
+
+The project uses a supervised binary classification setting with resistant isolates treated as the positive class. This choice matches the practical objective of detecting resistant cases. The feature matrix contains determinant-level evidence from the normalized genotype table, while the target labels come from cleaned AST phenotype data.
+
+Cross-validation is used to estimate model performance consistently across antibiotics. The current implementation uses five-fold stratified cross-validation with a fixed random seed. This keeps the class ratio similar across folds and makes the evaluation more stable than a single train-test split. The main XGBoost settings are: \texttt{n\_estimators = 250}, \texttt{learning\_rate = 0.05}, \texttt{max\_depth = 5}, \texttt{subsample = 0.8}, and \texttt{colsample\_bytree = 0.8}. The implementation also uses class weighting through \texttt{scale\_pos\_weight} so that resistant cases are not dominated by the larger susceptible class when the data are imbalanced.
+
+The evaluation focuses on the following metrics:
+
+\begin{itemize}
+    \item \textbf{Recall}: important because missing a resistant isolate is a high-risk error.
+    \item \textbf{Precision}: important because incorrectly calling an isolate resistant also has practical cost.
+    \item \textbf{ROC-AUC}: useful for measuring how well the model separates resistant and susceptible isolates across thresholds.
+    \item \textbf{Accuracy}: reported as supporting context rather than the main metric.
+\end{itemize}
+
+In addition to machine learning, the final evaluation includes curated determinant-based rule baselines. These baselines use the same cleaned cohort and the same prepared input tables as the ML models, but replace learned prediction with a direct rule. For one isolate under a given scope, the prediction is resistant if at least one connected gene- or mutation-based feature is present; otherwise the prediction is susceptible. Under this design, the difference between \textit{strict rule-based} and \textit{broad rule-based} comes from the feature scope in the prepared input tables rather than from a different decision formula.
+
+This setup is important because it separates two sources of improvement:
+
+\begin{itemize}
+    \item improvement gained by relaxing or tightening the biological scope; and
+    \item improvement gained by replacing a direct rule with machine learning.
+\end{itemize}
+
+As a result, the report can compare a simple biology-based rule against a learned model under the same dataset construction protocol.

@@ -1,3 +1,15 @@
 \section{Research Objectives}
 
-Replace this section with your objectives.
+The report is guided by the following objectives:
+
+\begin{enumerate}[label=\arabic*.]
+    \item Build a reproducible pipeline that connects assembled bacterial genomes, curated AMR determinant detection, AST phenotype labels, and antibiotic-specific prediction datasets.
+    \item Clean and normalize genotype and phenotype data so that the final cohort contains only isolates with usable and interpretable information.
+    \item Construct three determinant-connection settings, namely \textit{strict}, \textit{broad}, and \textit{all}, in order to study how biological scope affects prediction quality.
+    \item Train and evaluate antibiotic-specific machine learning models on the prepared datasets using a consistent cross-validation protocol.
+    \item Add a curated determinant-based rule baseline to represent direct genotype-to-phenotype inference without machine learning.
+    \item Compare rule-based and machine-learning approaches in terms of recall, precision, and overall predictive performance.
+    \item Explain the biological meaning of the observed differences, especially the trade-off between interpretability, feature coverage, and genotype-phenotype mismatch.
+\end{enumerate}
+
+Taken together, these objectives define two concrete deliverables. First, the study provides a methodology that can be reproduced and extended. Second, it provides a clear comparison showing whether broader determinant usage and machine learning offer benefits beyond direct rule-based inference.

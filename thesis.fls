@@ -1,6 +1,6 @@
-PWD d:\Caohoc\TinSinh\Submit\Tin_sinh_hoc
+PWD D:\Caohoc\TinSinh\Submit\Tin_sinh_hoc
 INPUT C:\Users\ADMIN\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Caohoc\TinSinh\Submit\Tin_sinh_hoc\thesis.tex
+INPUT thesis.tex
 OUTPUT thesis.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\report.cls
@@ -354,6 +354,7 @@ INPUT chapters\abtract_vi.tex
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT .\thesis.toc
@@ -410,6 +411,7 @@ INPUT chapters\c1\c1_problem.tex
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\chapters\c1\c1_related_work.tex
 INPUT .\chapters\c1\c1_related_work.tex
 INPUT .\chapters\c1\c1_related_work.tex
@@ -425,6 +427,10 @@ INPUT .\chapters\c2\c2_chapter.tex
 INPUT .\chapters\c2\c2_chapter.tex
 INPUT .\chapters\c2\c2_chapter.tex
 INPUT chapters\c2\c2_chapter.tex
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vntt12.tfm
 INPUT .\chapters\c3\c3_chapter.tex
 INPUT .\chapters\c3\c3_chapter.tex
 INPUT .\chapters\c3\c3_chapter.tex
@@ -450,6 +456,19 @@ INPUT .\chapters\c3\c3_workflow_construction.tex
 INPUT .\chapters\c3\c3_workflow_construction.tex
 INPUT .\chapters\c3\c3_workflow_construction.tex
 INPUT chapters\c3\c3_workflow_construction.tex
+INPUT .\figures\scope_broad_example.png
+INPUT .\figures\scope_broad_example.png
+INPUT .\figures\scope_broad_example.png
+INPUT .\figures\scope_broad_example.png
+INPUT .\figures\scope_broad_example.png
+INPUT .\figures\scope_broad_example.png
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
+INPUT .\figures\prepared_input_example.png
+INPUT .\figures\prepared_input_example.png
+INPUT .\figures\prepared_input_example.png
+INPUT .\figures\prepared_input_example.png
+INPUT .\figures\prepared_input_example.png
+INPUT .\figures\prepared_input_example.png
 INPUT .\chapters\c3\c3_workflow_evolution.tex
 INPUT .\chapters\c3\c3_workflow_evolution.tex
 INPUT .\chapters\c3\c3_workflow_evolution.tex
@@ -470,6 +489,24 @@ INPUT .\chapters\c4\c4_result.tex
 INPUT .\chapters\c4\c4_result.tex
 INPUT .\chapters\c4\c4_result.tex
 INPUT chapters\c4\c4_result.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT .\figures\roc_auc_by_scope.png
+INPUT .\figures\roc_auc_by_scope.png
+INPUT .\figures\roc_auc_by_scope.png
+INPUT .\figures\roc_auc_by_scope.png
+INPUT .\figures\roc_auc_by_scope.png
+INPUT .\figures\roc_auc_by_scope.png
 INPUT .\chapters\conclusion.tex
 INPUT .\chapters\conclusion.tex
 INPUT .\chapters\conclusion.tex
@@ -481,7 +518,13 @@ INPUT thesis.bbl
 INPUT thesis.aux
 INPUT .\thesis.out
 INPUT .\thesis.out
+INPUT C:\Users\ADMIN\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\ADMIN\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
 INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
+INPUT C:\Users\ADMIN\AppData\Roaming\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
